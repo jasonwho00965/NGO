@@ -21,8 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('', TemplateView.as_view(template_name='event_details.html'), name='event_details'),
-
+    path('user-view/', TemplateView.as_view(template_name='user_view.html'), name='event'),
+    path('registration/', TemplateView.as_view(template_name='event_registration.html'), name='registration'),
 ]
 
 admin.site.site_header = "NGO Admin"
