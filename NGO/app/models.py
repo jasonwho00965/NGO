@@ -38,6 +38,9 @@ class EventManagement(models.Model):
     e_adult_price = models.DecimalField(max_digits=5, decimal_places=2)
     e_child_price = models.DecimalField(max_digits=5, decimal_places=2)
 
+    def __unicode__(self):
+        return u'%s' % self.Event
+
 def change_button(self, obj):
     return format_html('<a class="btn" href="/admin/my_app/my_model/{}/change/">Change</a>', obj.id)
 

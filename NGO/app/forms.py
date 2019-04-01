@@ -12,7 +12,5 @@ class RegisterForm(forms.Form):
     childQty = forms.CharField(label='Child Quantity', max_length=2)
 
 
-class NameForm(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100)
 
 

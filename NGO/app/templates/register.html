@@ -48,7 +48,7 @@
     </p>
     <p>
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <input type="submit" value="Next">
     </p>
 </form>

@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .forms import RegisterForm
-from .forms import NameForm
+from django.view.generic import TemplateView
+from .models import EventManagement
 
 from NGO.app.models import User
 
@@ -14,6 +15,12 @@ def get_name(request):
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
+
+# trying to retrieve all data from database, not done yet.
+def get_event(request):
+	data = EventManagement.objects.all()
+	return render(request, '', {'data': data})
+
 
 
 
