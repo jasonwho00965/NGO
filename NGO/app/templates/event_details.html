@@ -1,7 +1,7 @@
 
-{% extends%}
-{%%}
-{%%}
+{% extends 'base.html' %}
+{% block title %} Event Details {% endblock %}
+{% block content %}
 <div>
     <h3>{{ event.e_name|capfirst }}</h3>
     <p>Description: {{ event.e_description }}</p>
@@ -19,4 +19,4 @@
     <p>Children:{{ event.e_child_price }}</p>
 </div>
 
-{%%}
+{% endblock %}
