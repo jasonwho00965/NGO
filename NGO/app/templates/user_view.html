@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+
+<h1>Event Registration</h1>
+<a href="{% url 'event-details' %}">
+    <img src="" alt="" style="width:500px;height:500px;">
+    <p>Event Name: Location</p>
+</a>
+
+
+{% endif %}
+{% endblock %}
