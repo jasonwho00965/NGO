@@ -1,7 +1,20 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponseRedirect
+from .forms import RegisterForm
+from .forms import NameForm
 
 from NGO.app.models import User
+
+
+def get_name(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect('/thanks/')
+    else:
+        form = RegisterForm()
+    return render(request, 'register.html', {'form': form})
+
 
 
 def home(request):
